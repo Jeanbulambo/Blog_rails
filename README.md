@@ -14,7 +14,11 @@ Clone this repo by typing :
 
 git clone git@github.com:Jeanbulambo/Blog_rails.git
 
-## Authors
+For test run :
+
+rspec
+
+## Author
 
 
 👤 **Jean Bulambo**
