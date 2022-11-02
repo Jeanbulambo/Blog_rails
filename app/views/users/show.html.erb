@@ -2,11 +2,11 @@
   <%= render partial: 'portials/user', locals: {user: @user} %>
   <div class='user-bio'>
     <p>Bio:</p>
-    <%= @user.Bio %>
+    <%= @user.bio %>
   </div>   
   <div>
     <% if @user.posts.count < 0 %>
-      <p class='user-post'><%= @user.Name %> doesn't have a post <em>yet!!</em></p>
+      <p class='user-post'><%= @user.name %> doesn't have a post <em>yet!!</em></p>
     <% else %>
       <% @user.recent_post.each do |post| %>
         <%= render partial: 'portials/post_entier', locals: {post: post} %>
