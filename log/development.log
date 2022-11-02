@@ -1402,3 +1402,125 @@ FOREIGN KEY ("author_id")
   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
   [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "b41ee3e4f614b7c2c3a7ead83f3c1b9c46852530"], ["created_at", "2022-10-28 17:35:11.852100"], ["updated_at", "2022-10-28 17:35:11.852100"]]
   [1m[36mTRANSACTION (17.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2022-11-02 18:57:50 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (37.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:11:13 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:21:08 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:25:32 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:44:39 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (25.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered portials/_user.html.erb (Duration: 18.1ms | Allocations: 6726)
+  Rendered users/index.html.erb within layouts/application (Duration: 68.2ms | Allocations: 13033)
+  Rendered layout layouts/application.html.erb (Duration: 68.6ms | Allocations: 13129)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 32.0ms | Allocations: 19149)
+
+
+  
+ActionView::Template::Error (undefined method `Photo' for #<User id: 1, name: "Tom", photo: "https://unsplash.com/photos/F_-0BxGuVvo", bio: "Teacher from Mexico.", posts_counter: nil, created_at: "2022-10-27 23:27:52.433507000 +0000", updated_at: "2022-10-27 23:27:52.433507000 +0000">
+Did you mean?  photo
+               photo?
+               photo=):
+    1: <div class='user-info'>
+    2:   <div class='image-container'>
+    3:     <img src= <%= user.Photo %> alt= '<%= user.Name + ' avatar'%>'/>
+    4:   </div>
+    5:   <div class='user-content'>
+    6:     <h2><%= user.Name %></h2>
+  
+app/views/portials/_user.html.erb:3
+app/views/users/index.html.erb:3
+app/views/users/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:47:38 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered portials/_user.html.erb (Duration: 7.8ms | Allocations: 6713)
+  Rendered users/index.html.erb within layouts/application (Duration: 32.6ms | Allocations: 13020)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 13116)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 5.8ms | Allocations: 19136)
+
+
+  
+ActionView::Template::Error (undefined method `Name' for #<User id: 1, name: "Tom", photo: "https://unsplash.com/photos/F_-0BxGuVvo", bio: "Teacher from Mexico.", posts_counter: nil, created_at: "2022-10-27 23:27:52.433507000 +0000", updated_at: "2022-10-27 23:27:52.433507000 +0000">
+Did you mean?  name
+               name?
+               name=):
+    1: <div class='user-info'>
+    2:   <div class='image-container'>
+    3:     <img src= <%= user.photo %> alt= '<%= user.Name + ' avatar'%>'/>
+    4:   </div>
+    5:   <div class='user-content'>
+    6:     <h2><%= user.Name %></h2>
+  
+app/views/portials/_user.html.erb:3
+app/views/users/index.html.erb:3
+app/views/users/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:48:49 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Count (51.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 117.6ms | Allocations: 7762)
+  [1m[36mPost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 3.3ms | Allocations: 837)
+  Rendered users/index.html.erb within layouts/application (Duration: 154.6ms | Allocations: 14961)
+  Rendered layout layouts/application.html.erb (Duration: 979.3ms | Allocations: 105162)
+Completed 200 OK in 1011ms (Views: 921.6ms | ActiveRecord: 63.2ms | Allocations: 111226)
+
+
