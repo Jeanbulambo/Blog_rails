@@ -1,0 +1,12 @@
+<div class='user-post'>
+  <h4 class='post-title'><%= post.Title%> </h4>
+  <p class='post-text'>
+    <% if post.Text.length > 110 %>
+      <%= truncate(post.Text, length: 110) ... %>
+    <% else %>
+      <%= post.Text %>.
+    <% end %>
+  </p>
+  <p class='statics'>Comments: <span><%= post.comments.count %></span>, Likes: <span><%= post.likes.count %></span></p>
+</div>
+first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
