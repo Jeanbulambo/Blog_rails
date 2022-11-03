@@ -1402,3 +1402,277 @@ FOREIGN KEY ("author_id")
   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
   [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "b41ee3e4f614b7c2c3a7ead83f3c1b9c46852530"], ["created_at", "2022-10-28 17:35:11.852100"], ["updated_at", "2022-10-28 17:35:11.852100"]]
   [1m[36mTRANSACTION (17.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2022-11-02 18:57:50 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (37.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:11:13 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:21:08 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:25:32 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UserController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  UsersController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:44:39 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (25.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered portials/_user.html.erb (Duration: 18.1ms | Allocations: 6726)
+  Rendered users/index.html.erb within layouts/application (Duration: 68.2ms | Allocations: 13033)
+  Rendered layout layouts/application.html.erb (Duration: 68.6ms | Allocations: 13129)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 32.0ms | Allocations: 19149)
+
+
+  
+ActionView::Template::Error (undefined method `Photo' for #<User id: 1, name: "Tom", photo: "https://unsplash.com/photos/F_-0BxGuVvo", bio: "Teacher from Mexico.", posts_counter: nil, created_at: "2022-10-27 23:27:52.433507000 +0000", updated_at: "2022-10-27 23:27:52.433507000 +0000">
+Did you mean?  photo
+               photo?
+               photo=):
+    1: <div class='user-info'>
+    2:   <div class='image-container'>
+    3:     <img src= <%= user.Photo %> alt= '<%= user.Name + ' avatar'%>'/>
+    4:   </div>
+    5:   <div class='user-content'>
+    6:     <h2><%= user.Name %></h2>
+  
+app/views/portials/_user.html.erb:3
+app/views/users/index.html.erb:3
+app/views/users/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:47:38 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered portials/_user.html.erb (Duration: 7.8ms | Allocations: 6713)
+  Rendered users/index.html.erb within layouts/application (Duration: 32.6ms | Allocations: 13020)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 13116)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 5.8ms | Allocations: 19136)
+
+
+  
+ActionView::Template::Error (undefined method `Name' for #<User id: 1, name: "Tom", photo: "https://unsplash.com/photos/F_-0BxGuVvo", bio: "Teacher from Mexico.", posts_counter: nil, created_at: "2022-10-27 23:27:52.433507000 +0000", updated_at: "2022-10-27 23:27:52.433507000 +0000">
+Did you mean?  name
+               name?
+               name=):
+    1: <div class='user-info'>
+    2:   <div class='image-container'>
+    3:     <img src= <%= user.photo %> alt= '<%= user.Name + ' avatar'%>'/>
+    4:   </div>
+    5:   <div class='user-content'>
+    6:     <h2><%= user.Name %></h2>
+  
+app/views/portials/_user.html.erb:3
+app/views/users/index.html.erb:3
+app/views/users/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2022-11-02 19:48:49 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Count (51.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 117.6ms | Allocations: 7762)
+  [1m[36mPost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 3.3ms | Allocations: 837)
+  Rendered users/index.html.erb within layouts/application (Duration: 154.6ms | Allocations: 14961)
+  Rendered layout layouts/application.html.erb (Duration: 979.3ms | Allocations: 105162)
+Completed 200 OK in 1011ms (Views: 921.6ms | ActiveRecord: 63.2ms | Allocations: 111226)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-02 21:36:33 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 121.5ms | Allocations: 6563)
+  [1m[36mPost Count (4.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 8.0ms | Allocations: 837)
+  Rendered users/index.html.erb within layouts/application (Duration: 191.4ms | Allocations: 13761)
+  Rendered layout layouts/application.html.erb (Duration: 331.4ms | Allocations: 50473)
+Completed 200 OK in 606ms (Views: 369.2ms | ActiveRecord: 14.3ms | Allocations: 56537)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-02 21:39:24 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 3.1ms | Allocations: 817)
+  [1m[36mPost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 2.2ms | Allocations: 740)
+  Rendered users/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2345)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5017)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 1.6ms | Allocations: 5360)
+
+
+Started GET "/user" for 127.0.0.1 at 2022-11-02 21:40:10 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/post/index" for 127.0.0.1 at 2022-11-02 21:41:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/post/index"):
+  
+Started GET "/users/index" for 127.0.0.1 at 2022-11-02 21:41:28 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 46.8ms | Allocations: 6548)
+  [1m[36mPost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 2.7ms | Allocations: 837)
+  Rendered users/index.html.erb within layouts/application (Duration: 86.2ms | Allocations: 13507)
+  Rendered layout layouts/application.html.erb (Duration: 176.4ms | Allocations: 50000)
+Completed 200 OK in 210ms (Views: 165.6ms | ActiveRecord: 13.8ms | Allocations: 54933)
+
+
+Started GET "/users/show" for 127.0.0.1 at 2022-11-02 21:41:53 +0200
+Processing by UsersController#show as HTML
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 574)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:7:in `show'
+Started GET "/posts/index" for 127.0.0.1 at 2022-11-02 21:43:28 +0200
+Processing by PostsController#index as HTML
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 521)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/posts_controller.rb:3:in `index'
+Started GET "/users/index" for 127.0.0.1 at 2022-11-02 21:43:56 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Count (6.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 9.9ms | Allocations: 815)
+  [1m[36mPost Count (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 5.5ms | Allocations: 740)
+  Rendered users/index.html.erb within layouts/application (Duration: 22.5ms | Allocations: 2336)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 4941)
+Completed 200 OK in 35ms (Views: 22.9ms | ActiveRecord: 10.0ms | Allocations: 5250)
+
+
+Started GET "/users/SHOW" for 127.0.0.1 at 2022-11-02 21:47:33 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"SHOW"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.6ms | Allocations: 1891)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=SHOW):
+  
+app/controllers/users_controller.rb:7:in `show'
+Started GET "/" for 127.0.0.1 at 2022-11-02 21:50:55 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 30.2ms | Allocations: 6564)
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 3.1ms | Allocations: 837)
+  Rendered users/index.html.erb within layouts/application (Duration: 71.1ms | Allocations: 13763)
+  Rendered layout layouts/application.html.erb (Duration: 222.5ms | Allocations: 50556)
+Completed 200 OK in 255ms (Views: 213.5ms | ActiveRecord: 17.0ms | Allocations: 56620)
+
+
+Started GET "/users/show" for 127.0.0.1 at 2022-11-02 21:51:11 +0200
+Processing by UsersController#show as HTML
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 589)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:7:in `show'
+Started GET "/users/index" for 127.0.0.1 at 2022-11-02 21:51:36 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Count (5.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 8.4ms | Allocations: 815)
+  [1m[36mPost Count (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/portials/_user.html.erb:7
+  Rendered portials/_user.html.erb (Duration: 6.3ms | Allocations: 740)
+  Rendered users/index.html.erb within layouts/application (Duration: 23.8ms | Allocations: 2354)
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 5045)
+Completed 200 OK in 39ms (Views: 27.3ms | ActiveRecord: 8.0ms | Allocations: 5367)
+
+

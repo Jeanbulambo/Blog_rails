@@ -1,0 +1,5 @@
+<section class='users-list'>
+  <% @users.each do |user| %>
+    <%= render partial: 'portials/user', locals: {user: user} %>
+  <% end %>
+</section>
