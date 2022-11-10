@@ -1,11 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @user = User.find(params[:user_id])
-    @posts = @user.posts
-  end
-
-  def show
-    @post = Post.find(params[:id])
+    @posts = Post.all
+    @user = User.find(params[:user_id].to_i)
   end
 
   def new
@@ -13,24 +9,26 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
-    @post.user = current_user
-    respond_to do |format|
-      format.html do
-        if @post.save
-          flash[:success] = 'Post saved successfully'
-          redirect_to user_post_path(current_user, @post)
-        else
-          flash.now[:error] = 'Error occured, Post not saved.'
-          render :new
-        end
-      end
+    @post = Post.new(post_params)
+    @author = current_user
+    @post.author = @author
+    if @post.save
+      flash[:success] = 'Successfully created'
+      redirect_to new_user_post_path(@author.id)
+    else
+      flash[:error] = 'Error:  error while trying to creat!!'
+      render :new
     end
+  end
+
+  def show
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:id])
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:Title, :Text)
+    params.require(:post).permit(:title, :text)
   end
 end

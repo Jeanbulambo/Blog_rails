@@ -1,12 +1,43 @@
-<section class='post-container'>
-  <%= render partial: 'portials/user', locals: {user: @user} %>
-  <% @posts.each do |post| %>
-    <%= render partial: 'portials/post', locals: {post: post} %>
-    <div class='comments_container user-post'>
-      <%= render partial: 'portials/comment', locals: {post: post} %>
-    </div>
-  <% end %>
-  <div class='btn-container'>
-    <a class= "posts-btn" href='' >Pagination</a>
-  </div>
-</section>
+<h2>post list</h2>
+ <%= link_to new_user_post_path(@user.id) do %>
+        <div class="all_post">
+            <button>create Post</button>
+        </div>
+    <%end%>
+
+<div class="single_user_container">
+    <div class="image_name_holder">
+        <div class="user_image">
+            <img src="<%= @user.photo %>" />
+        </div>  
+
+        <div class="name_container">
+            <h1><%= @user.name %></h1> 
+            <span>Number of posts: <%= @user.posts_counter%></span>
+        </div>
+     </div>
+
+    <%@posts.each do |post|%>
+        <%= link_to user_post_path(@user, post) do%>
+            <div class="post_holder">
+                <h3>Post: <%= post.id%></h3>
+
+                <div>
+                    <h3><%= post.title%></h3>
+                    <p>Description: <%= post.text%></p>
+                    <p>Number of comments: <%= post.comments_counter%></p>
+                    <p>Number of likes: <%= post.likes_counter%></p>
+                </div>
+            </div>
+
+            <div>
+              <% post.recent_comments.includes([:author]).each do |comment| %>
+                <p><%=comment.author.name %>: Comment <%= comment.id %> <%=comment.text %></p>
+              <% end %>
+          </div>
+        <%end%>
+     <%end%>
+
+     <button>Pagination</button>
+
+</div>
