@@ -1,14 +1,2 @@
-<section class='form-container'>
-  <h1>New Post </h1>
-  <%= form_with model: Post, method: :post do |form| %>
-    <div class="post-tilte"> 
-      <%= form.label :title, class:'label' %><br />
-      <%= form.text_field :Title, placeholder: 'Write your post title ...', class:"title-input" %>
-    </div>
-    <div class='post-text'>
-      <%= form.label :text, "Post", class:'label' %><br />
-      <%= form.text_area :Text, placeholder: 'Write your post here...', class:"text-input" %>
-    </div>
-    <%= form.submit "New Post", class:"submit-btn" %>
-  <% end %>
-</section>
+<h1>Add a Post</h1>
+<%= render "form" %>
