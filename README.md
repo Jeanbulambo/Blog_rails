@@ -29,11 +29,16 @@ rspec
 
 ## Author :writing_hand:
 
-:man_technologist:  **Aron Abraham** :writing_hand: 
+:man_technologist:  **Aron Abraham** :writing_hand:
 
 - GitHub: [@Aaron](https://github.com/aron-helu)
-- LinkedIn: [@Aaron](https://www.linkedin.com/in/aron-abraham-90a4321b0/)  
+- LinkedIn: [@Aaron](https://www.linkedin.com/in/aron-abraham-90a4321b0/)
 ## 🤝 Contributing
+
+:man_technologist: **Rodrigo Johann Reckziegel Nunes** :writing_hand:
+
+- GitHub: [@Hannziegel](https://github.com/Hannziegel)
+- LinkedIn: [Rodrigo Johann Reckziegel Nunes](https://www.linkedin.com/in/rodrigojrnunes/)
 
 Contributions, issues, and feature requests are welcome!
 
