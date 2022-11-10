@@ -775,3 +775,10 @@ AVOID eager loading detected
   Remove from your query: .includes([:author])
 Call stack
 
+2022-11-10 23:30:48[WARN] user: jean
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+

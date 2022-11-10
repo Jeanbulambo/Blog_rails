@@ -8329,3 +8329,108 @@ Migrating to FixError (20221109202303)
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3278322225567644535)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2022-11-10 23:28:10 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (39.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (49.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 130.5ms | Allocations: 6607)
+  Rendered layout layouts/application.html.erb (Duration: 1533.8ms | Allocations: 43940)
+Completed 200 OK in 1772ms (Views: 1502.3ms | ActiveRecord: 80.5ms | Allocations: 50038)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-10 23:28:14 +0200
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 901)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3575)
+Completed 200 OK in 20ms (Views: 14.1ms | ActiveRecord: 0.7ms | Allocations: 3920)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2022-11-10 23:28:26 +0200
+  
+SyntaxError (/home/jean/Documents/Microverse/Module 5/blog_correct/Blog_rails/app/controllers/posts_controller.rb:33: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/posts_controller.rb:33: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/posts_controller.rb:33: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/posts_controller.rb:33: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/1/posts" for 127.0.0.1 at 2022-11-10 23:30:27 +0200
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (71.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 71.4ms | Allocations: 4201)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "users".* FROM "users" WHERE (1) LIMIT $1
+                                             ^
+):
+  
+app/controllers/posts_controller.rb:3:in `index'
+Started GET "/users/1/posts" for 127.0.0.1 at 2022-11-10 23:30:47 +0200
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (38.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mComment Load (46.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN ($1, $2, $3, $4)[0m  [["post_id", 4], ["post_id", 3], ["post_id", 2], ["post_id", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 4], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:34
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/views/posts/index.html.erb:34
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 3], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/views/posts/index.html.erb:34
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 2], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/views/posts/index.html.erb:34
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 1], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/views/posts/index.html.erb:34
+  Rendered posts/index.html.erb within layouts/application (Duration: 255.6ms | Allocations: 27717)
+  Rendered layout layouts/application.html.erb (Duration: 277.6ms | Allocations: 42944)
+Completed 200 OK in 349ms (Views: 186.0ms | ActiveRecord: 100.0ms | Allocations: 51985)
+
+
+user: jean
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+
+Started GET "/users/1/posts/4" for 127.0.0.1 at 2022-11-10 23:30:56 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `show'
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:26:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered likes/_like.html.erb (Duration: 37.5ms | Allocations: 1842)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 4], ["LIMIT", 5]]
+  ↳ app/views/posts/show.html.erb:26
+  Rendered comments/_form.html.erb (Duration: 19.7ms | Allocations: 776)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:35
+  Rendered posts/show.html.erb within layouts/application (Duration: 82.1ms | Allocations: 6124)
+  Rendered layout layouts/application.html.erb (Duration: 88.3ms | Allocations: 8558)
+Completed 200 OK in 107ms (Views: 88.9ms | ActiveRecord: 2.1ms | Allocations: 11318)
+
+
