@@ -27,7 +27,12 @@ rspec
 - Twitter: [@Jeanbulambo](https://twitter.com/Jeanbulambo4)
 - LinkedIn: [@Jeanbulambo](https://www.linkedin.com/in/jean-bulambo)
 
+## Author :writing_hand:
 
+:man_technologist:  **Aron Abraham** :writing_hand: 
+
+- GitHub: [@Aaron](https://github.com/aron-helu)
+- LinkedIn: [@Aaron](https://www.linkedin.com/in/aron-abraham-90a4321b0/)  
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
