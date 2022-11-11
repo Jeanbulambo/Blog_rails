@@ -18,7 +18,7 @@ For test run :
 
 rspec
 
-## Author
+## Authors
 
 
 👤 **Jean Bulambo**
@@ -33,8 +33,6 @@ rspec
 
 - GitHub: [@Aaron](https://github.com/aron-helu)
 - LinkedIn: [@Aaron](https://www.linkedin.com/in/aron-abraham-90a4321b0/)
-## 🤝 Contributing
-
 :man_technologist: **Rodrigo Johann Reckziegel Nunes** :writing_hand:
 
 - GitHub: [@Hannziegel](https://github.com/Hannziegel)
@@ -43,6 +41,10 @@ rspec
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
+
+## 🤝 Contributing
+
+
 
 ## Show your support
 
