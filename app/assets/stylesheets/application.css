@@ -1,15 +1,319 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  height: auto;
+  margin: 0.8rem 2.5rem;
+  padding: 1rem;
+}
+
+.image-container {
+  width: 15%;
+  height: auto;
+  border: 2px solid black;
+  margin: 1.2rem 4%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.user-content {
+  width: 80%;
+  height: auto;
+  border: 2px solid black;
+  margin: 1.8rem 1rem 1.8rem 0;
+  padding: 1.5rem;
+}
+
+.user-content h2 {
+  font-size: 2.5rem;
+}
+
+.user-content p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: end;
+  vertical-align: text-bottom;
+  margin: 3rem 0 0 0;
+}
+
+.user-bio {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 85%;
+  min-height: 5rem;
+  border: 2px solid black;
+  margin: 1.8rem 2.5rem;
+  padding: 1.5rem;
+}
+
+.user-bio p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.user-post {
+  font-weight: 600;
+  width: 85%;
+  min-height: 5rem;
+  border: 2px solid black;
+  margin: 1.8rem 2.5rem;
+  padding: 1.5rem;
+}
+
+.post-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.post-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.statics {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: end;
+  vertical-align: text-bottom;
+}
+
+.btn-container {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  border: 2px solid black;
+  box-shadow: 2px 5px 2px;
+  padding: 0.2rem 0.5rem;
+  margin: 0 auto 3rem auto;
+}
+
+.posts-btn {
+  height: 80%;
+  width: 100%;
+  padding: 0.4rem;
+  margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.btn-container:hover {
+  background-color: #413c3c;
+}
+
+.posts-btn:hover {
+  color: #fff;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0.8rem auto;
+}
+
+.form-container {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin: 5rem auto;
+}
+
+.form-container h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.post-tilte,
+.post-text {
+  width: 80%;
+  margin: 0.5rem auto;
+}
+
+.post-tilte .title-input,
+.post-text .text-input {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.post-text .text-input {
+  height: 8rem;
+}
+
+.submit-btn {
+  padding: 0.4rem;
+  margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid black;
+  box-shadow: 2px 5px 2px;
+}
+
+.submit-btn:hover {
+  background-color: #413c3c;
+  color: #fff;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.new-comment-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 85%;
+  margin: 1.8rem 2.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.new-comment-container h3 {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.new-comment .comment-input {
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  margin: 0.5rem 0;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.comment-btn {
+  width: auto;
+  margin: 0.5rem 0.2rem;
+  padding: 0.4rem;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 5px 5px 5px;
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 0.1rem;
+}
+
+.comment-btn:hover {
+  background-color: #413c3c;
+  color: #fff;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.like-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  background: #fff;
+  padding: 0.2rem 0.4rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px;
+}
+
+.like-btn:hover {
+  background-color: #413c3c;
+  color: #fff;
+}
+
+.user-name {
+  text-decoration: none;
+  color: #000;
+}
+
+.login-container {
+  width: 100%;
+  margin: 7rem auto;
+}
+
+.login {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.login h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.email,
+.password,
+.login-btn {
+  width: 98.5%;
+  height: auto;
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0.5rem 0;
+  padding: 0.2rem;
+  border: 2px solid black;
+}
+
+.email::placeholder,
+.password::placeholder {
+  color: #000;
+}
+
+.login-btn {
+  width: 100%;
+  background: #fff;
+  font-weight: 600;
+}
+
+.login-btn:hover {
+  background-color: #413c3c;
+  color: #fff;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.links a {
+  color: #0a57ff;
+  text-decoration: none;
+  padding: 0 0.2rem;
+  border-right: 1.5px #000 solid;
+}
+
+.delete-btn {
+  color: #fff;
+  background: #c52626;
+  border: 2px solid #000;
+}
